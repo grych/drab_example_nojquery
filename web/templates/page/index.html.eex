@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to %{name}", name: "Phoenix + Drab (no jQuery)!" %></h2>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-12">
+  <p>
+    This is an example project with jQueryless Drab installed. Please refrer to https://tg.pl/drab/nojquery 
+    for more description.
+  </p>
+  <p>
+    Client side code:
+    <pre><code>&lt;button onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'});"&gt;
+  onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'})"
+&lt;/button&gt;
+    </pre></code>
+  </p>
+  <p>
+    Server side code:
+    <pre><code>defmodule DrabExampleNojquery.PageCommander do
+  use Drab.Commander, onload: :page_loaded, modules: []
+  require Logger
+
+  def page_loaded(socket) do
+    socket |> execjs("console.log('hello from the other side')")
+  end
+
+  def clicked(socket, payload) do 
+    socket |> execjs("alert('clicked the button: #{payload|>inspect}')")
+  end
+end   
+    </code></pre>
+  </p>
+  <button onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'});">
+    onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'})"
+  </button>
+  </div>
+</div>
