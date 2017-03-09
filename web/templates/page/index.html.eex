@@ -31,8 +31,8 @@
 end   
     </code></pre>
   </p>
-  <button onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'});">
-    onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'})"
+  <button onclick="Drab.run_handler('click', 'clicked', {click: 'clickety-click'});">
+    onclick="Drab.run_handler('click', 'clicked', {click: 'clickety-click'})"
   </button>
   </div>
 </div>

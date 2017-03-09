@@ -2,7 +2,6 @@ defmodule DrabExampleNojquery.Endpoint do
   use Phoenix.Endpoint, otp_app: :drab_example_nojquery
 
   socket "/socket", DrabExampleNojquery.UserSocket
-  socket Drab.config.socket, Drab.Socket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
