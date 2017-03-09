@@ -1,6 +1,6 @@
 %{"cowboy": {:hex, :cowboy, "1.0.4", "a324a8df9f2316c833a470d918aaf73ae894278b8aa6226ce7a9bf699388f878", [:make, :rebar], [{:cowlib, "~> 1.0.0", [hex: :cowlib, optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, optional: false]}]},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], []},
-  "drab": {:hex, :drab, "0.1.1", "201c6760009505cc76d47d74eb8157ae2196dceb71b487ab1e668e257b34d2c9", [:mix], [{:phoenix, "~> 1.2", [hex: :phoenix, optional: false]}, {:phoenix_html, "~> 2.6", [hex: :phoenix_html, optional: false]}]},
+  "drab": {:hex, :drab, "0.2.0", "e42c36716616e0114fb0055bb79998bd5411856cf3e896da8dacc5600f89d9c8", [:mix], [{:phoenix, "~> 1.2", [hex: :phoenix, optional: false]}, {:phoenix_html, "~> 2.6", [hex: :phoenix_html, optional: false]}]},
   "fs": {:hex, :fs, "2.12.0", "ad631efacc9a5683c8eaa1b274e24fa64a1b8eb30747e9595b93bec7e492e25e", [:rebar3], []},
   "gettext": {:hex, :gettext, "0.13.0", "daafbddc5cda12738bb93b01d84105fe75b916a302f1c50ab9fb066b95ec9db4", [:mix], []},
   "mime": {:hex, :mime, "1.0.1", "05c393850524767d13a53627df71beeebb016205eb43bfbd92d14d24ec7a1b51", [:mix], []},
