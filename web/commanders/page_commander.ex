@@ -1,6 +1,8 @@
 defmodule DrabExampleNojquery.PageCommander do
-  use Drab.Commander, onload: :page_loaded, modules: []
+  use Drab.Commander, modules: []
   require Logger
+
+  onload :page_loaded
 
   def page_loaded(socket) do
     socket |> execjs("console.log('hello from the other side')")
