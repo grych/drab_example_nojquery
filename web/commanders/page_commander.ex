@@ -8,7 +8,7 @@ defmodule DrabExampleNojquery.PageCommander do
     socket |> exec_js("console.log('hello from the other side')")
   end
 
-  def clicked(socket, payload) do
+  defhandler clicked(socket, payload) do
     socket |> exec_js("alert('clicked the button: #{payload|>inspect}')")
   end
 end

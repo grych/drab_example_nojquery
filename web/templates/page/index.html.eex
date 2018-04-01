@@ -5,7 +5,7 @@
 <div class="row marketing">
   <div class="col-lg-12">
   <p>
-    This is an example project with jQueryless Drab installed. Please refrer to https://tg.pl/drab/nojquery 
+    This is an example project with jQueryless Drab installed. Please refrer to https://tg.pl/drab/nojquery
     for more description.
   </p>
   <p>
@@ -25,10 +25,10 @@
     socket |> execjs("console.log('hello from the other side')")
   end
 
-  def clicked(socket, payload) do 
+  def clicked(socket, payload) do
     socket |> execjs("alert('clicked the button: #{payload|>inspect}')")
   end
-end   
+end
     </code></pre>
   </p>
   <button onclick="Drab.run_handler('click', 'clicked', {click: 'clickety-click'});">
