@@ -13,6 +13,9 @@ config :drab_example_nojquery, DrabExampleNojquery.Endpoint,
   pubsub: [name: DrabExampleNojquery.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :drab, DrabExampleNojquery.Endpoint,
+  otp_app: :drab_example_nojquery
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

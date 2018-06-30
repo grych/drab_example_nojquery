@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix + Drab (no jQuery)!" %></h2>
+  <h2><%= gettext "Welcome to %{name}", name: "Phoenix + Drab.Core!" %></h2>
 </div>
 
 <div class="row marketing">
@@ -10,8 +10,8 @@
   </p>
   <p>
     Client side code:
-    <pre><code>&lt;button onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'});"&gt;
-  onclick="Drab.launch_event('click', 'clicked', {click: 'clickety-click'})"
+    <pre><code>&lt;button onclick="Drab.exec_elixir('clicked', {click: 'clickety-click'});"&gt;
+  onclick="Drab.exec_elixir('clicked', {click: 'clickety-click'});"
 &lt;/button&gt;
     </pre></code>
   </p>
@@ -25,14 +25,14 @@
     socket |> execjs("console.log('hello from the other side')")
   end
 
-  def clicked(socket, payload) do
+  defhandler clicked(socket, payload) do
     socket |> execjs("alert('clicked the button: #{payload|>inspect}')")
   end
 end
     </code></pre>
   </p>
-  <button onclick="Drab.run_handler('click', 'clicked', {click: 'clickety-click'});">
-    onclick="Drab.run_handler('click', 'clicked', {click: 'clickety-click'})"
+  <button onclick="Drab.exec_elixir('clicked', {click: 'clickety-click'});">
+    onclick="Drab.exec_elixir('clicked', {click: 'clickety-click'})"
   </button>
   </div>
 </div>
